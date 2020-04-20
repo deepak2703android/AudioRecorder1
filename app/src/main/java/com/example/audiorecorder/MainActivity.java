@@ -61,7 +61,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(checkPermission()){
-
+                    stop.setBackgroundColor(Color.TRANSPARENT);
+                    record.setBackgroundColor(getResources().getColor(R.color.flamingo));
                     AudioSavePathInDevice = Environment.getExternalStorageDirectory()
                             .getAbsolutePath() + "/" + CreateRandomAudioFileName(5) + "AudioRecording.mp3";
                     MediaRecorderReady();
@@ -97,8 +98,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mediaRecorder.stop();
-
-
+                record.setBackgroundColor(Color.TRANSPARENT);
+                stoprecord.setBackgroundColor(getResources().getColor(R.color.flamingo));
                 play.setEnabled(true);
                 record.setEnabled(false);
                 stoprecord.setEnabled(false);
@@ -117,7 +118,8 @@ public class MainActivity extends AppCompatActivity {
                 stoprecord.setEnabled(false);
                 stop.setEnabled(true);
                 pause.setEnabled(true);
-
+                stoprecord.setBackgroundColor(Color.TRANSPARENT);
+                play.setBackgroundColor(getResources().getColor(R.color.flamingo));
                 mediaPlayer = new MediaPlayer();
                 i=0;
 
@@ -140,6 +142,9 @@ public class MainActivity extends AppCompatActivity {
                 stoprecord.setEnabled(false);
                 stop.setEnabled(true);
                 play.setEnabled(true);
+                play.setBackgroundColor(Color.TRANSPARENT);
+
+
                 if (i == 0) {
                     mediaPlayer.pause();
                      length = mediaPlayer.getCurrentPosition();
@@ -171,6 +176,10 @@ stop.setOnClickListener(new View.OnClickListener() {
         stop.setEnabled(false);
         play.setEnabled(true);
         pause.setEnabled(false);
+        play.setBackgroundColor(Color.TRANSPARENT);
+        stop.setBackgroundColor(getResources().getColor(R.color.flamingo));
+
+
         if(mediaPlayer != null){
 
             mediaPlayer.stop();
