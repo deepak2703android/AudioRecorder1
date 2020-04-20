@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgaud1"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/highlite"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/wings"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"/>
+
+    <Button
+        android:id="@+id/record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Recording"
+        android:background="@null"
+        android:fontFamily="sans-serif-black"
+        android:drawableTop="@drawable/mic"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/highlite"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:fontFamily="sans-serif-black"
+        android:text="Stop Recording"
+        android:drawableTop="@drawable/stop"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/highlite"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <Button
+        android:id="@+id/play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:fontFamily="sans-serif-black"
+        android:text="Play Recording"
+        android:drawableTop="@drawable/play"
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/record"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:fontFamily="sans-serif-black"
+        android:text="Pause/Resume"
+        android:layout_marginTop="30dp"
+        android:drawableTop="@drawable/pause_96px"
+        app:layout_constraintEnd_toStartOf="@id/stoppl"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/play"
+        app:layout_constraintTop_toBottomOf="@id/record"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/stoppl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Stop playing"
+        android:drawableTop="@drawable/stopaud"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@null"
+        android:fontFamily="sans-serif-black"
+        app:layout_constraintTop_toBottomOf="@id/record"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
